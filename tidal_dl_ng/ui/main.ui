@@ -40,164 +40,12 @@
    </property>
    <layout class="QHBoxLayout" name="horizontalLayout" stretch="0,50,25">
     <item>
-     <layout class="QVBoxLayout" name="lv_list_user">
-      <item>
-       <widget class="QTreeWidget" name="tr_lists_user">
-        <property name="toolTip">
-         <string notr="true"/>
-        </property>
-        <property name="statusTip">
-         <string notr="true"/>
-        </property>
-        <property name="whatsThis">
-         <string notr="true"/>
-        </property>
-        <property name="accessibleName">
-         <string notr="true"/>
-        </property>
-        <property name="accessibleDescription">
-         <string notr="true"/>
-        </property>
-        <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
-        </property>
-        <property name="showDropIndicator" stdset="0">
-         <bool>false</bool>
-        </property>
-        <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
-        </property>
-        <property name="indentation">
-         <number>10</number>
-        </property>
-        <property name="uniformRowHeights">
-         <bool>true</bool>
-        </property>
-        <property name="sortingEnabled">
-         <bool>true</bool>
-        </property>
-        <attribute name="headerCascadingSectionResizes">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="headerHighlightSections">
-         <bool>true</bool>
-        </attribute>
-        <attribute name="headerShowSortIndicator" stdset="0">
-         <bool>true</bool>
-        </attribute>
-        <column>
-         <property name="text">
-          <string notr="true">Name</string>
-         </property>
-         <property name="toolTip">
-          <string notr="true"/>
-         </property>
-         <property name="statusTip">
-          <string notr="true"/>
-         </property>
-         <property name="whatsThis">
-          <string notr="true"/>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string>obj</string>
-         </property>
-        </column>
-        <column>
-         <property name="text">
-          <string notr="true">Info</string>
-         </property>
-         <property name="toolTip">
-          <string notr="true"/>
-         </property>
-         <property name="statusTip">
-          <string notr="true"/>
-         </property>
-         <property name="whatsThis">
-          <string notr="true"/>
-         </property>
-        </column>
-        <item>
-         <property name="text">
-          <string>Playlists</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="flags">
-          <set>ItemIsEnabled</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Mixes</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="flags">
-          <set>ItemIsEnabled</set>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Favorites</string>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="flags">
-          <set>ItemIsEnabled</set>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="lv_list_control">
-        <item>
-         <widget class="QPushButton" name="pb_reload_user_lists">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Reload</string>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QPushButton" name="pb_download_list">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
-          </property>
-          <property name="text">
-           <string>Download List</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-     </layout>
+     <layout class="QVBoxLayout" name="lv_list_user"/>
     </item>
     <item>
      <layout class="QVBoxLayout" name="lv_search_result" stretch="0,0,0,0">
       <property name="spacing">
-       <number>-1</number>
+       <number>6</number>
       </property>
       <item>
        <layout class="QHBoxLayout" name="lh_search">
@@ -262,7 +110,7 @@
            <string notr="true"/>
           </property>
           <property name="sizeAdjustPolicy">
-           <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+           <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
           </property>
           <property name="placeholderText">
            <string notr="true"/>
@@ -296,7 +144,7 @@
       <item>
        <widget class="QTreeView" name="tr_results">
         <property name="editTriggers">
-         <set>QAbstractItemView::NoEditTriggers</set>
+         <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
         </property>
         <property name="showDropIndicator" stdset="0">
          <bool>false</bool>
@@ -308,7 +156,7 @@
          <bool>false</bool>
         </property>
         <property name="selectionMode">
-         <enum>QAbstractItemView::ExtendedSelection</enum>
+         <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
         </property>
         <property name="indentation">
          <number>10</number>
@@ -341,7 +189,7 @@
            <string notr="true">Audio</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -372,7 +220,7 @@
            <string notr="true"/>
           </property>
           <property name="sizeAdjustPolicy">
-           <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+           <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
           </property>
           <property name="placeholderText">
            <string notr="true"/>
@@ -403,7 +251,7 @@
            <string notr="true">Video</string>
           </property>
           <property name="alignment">
-           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+           <set>Qt::AlignmentFlag::AlignRight|Qt::AlignmentFlag::AlignTrailing|Qt::AlignmentFlag::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -434,7 +282,7 @@
            <string notr="true"/>
           </property>
           <property name="sizeAdjustPolicy">
-           <enum>QComboBox::AdjustToContentsOnFirstShow</enum>
+           <enum>QComboBox::SizeAdjustPolicy::AdjustToContentsOnFirstShow</enum>
           </property>
           <property name="placeholderText">
            <string notr="true"/>
@@ -543,7 +391,7 @@
              </size>
             </property>
             <property name="frameShape">
-             <enum>QFrame::NoFrame</enum>
+             <enum>QFrame::Shape::NoFrame</enum>
             </property>
             <property name="text">
              <string/>
@@ -555,7 +403,7 @@
              <bool>true</bool>
             </property>
             <property name="alignment">
-             <set>Qt::AlignHCenter|Qt::AlignTop</set>
+             <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
             </property>
            </widget>
           </item>
@@ -582,7 +430,7 @@
         <item>
          <widget class="QTreeWidget" name="tr_queue_download">
           <property name="editTriggers">
-           <set>QAbstractItemView::NoEditTriggers</set>
+           <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
           </property>
           <property name="tabKeyNavigation">
            <bool>false</bool>
@@ -594,10 +442,10 @@
            <bool>false</bool>
           </property>
           <property name="selectionMode">
-           <enum>QAbstractItemView::ExtendedSelection</enum>
+           <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
           </property>
           <property name="selectionBehavior">
-           <enum>QAbstractItemView::SelectRows</enum>
+           <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
           </property>
           <property name="rootIsDecorated">
            <bool>false</bool>
@@ -684,7 +532,7 @@
      <x>0</x>
      <y>0</y>
      <width>1200</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <property name="toolTip">
@@ -752,7 +600,7 @@
     <string notr="true"/>
    </property>
    <property name="layoutDirection">
-    <enum>Qt::LeftToRight</enum>
+    <enum>Qt::LayoutDirection::LeftToRight</enum>
    </property>
   </widget>
   <action name="a_preferences">

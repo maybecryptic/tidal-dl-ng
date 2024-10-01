@@ -34,6 +34,7 @@ class CoverDimensions(StrEnum):
     Px80: str = "80"
     Px160: str = "160"
     Px320: str = "320"
+    Px500: str = "500"
     Px640: str = "640"
     Px1280: str = "1280"
 
